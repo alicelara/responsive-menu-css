@@ -4,23 +4,45 @@ body {
 input[type="checkbox"] {
   display: none;
 }
-ul {
+
+
+.main-nav-horizontal {
   position: absolute;
-  right: 20px;
-  
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  border-top: 5px solid #385E9C;
 }
+
+ul {
+  width: 75%;
+  margin: -25px auto;
+  padding: 0;
+}
+
 ul.menu li{
   display: inline-block;
+  width: 100px;
+  height: 45px;
 }
 
 ul.menu li a{
   text-decoration: none;
-  color: #ffffff;
+  color: #333;
   letter-spacing: 1px;
-
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  display: block;
+  line-height: 65px;
+  text-indent: 8px
 }
 
-.content {
+ul.menu li a:hover {
+  background-color: #385E9C;
+  color: #ffffff;
+}
+.wrapper {
   position: absolute;
   top:50px;
   left: 0;
@@ -30,10 +52,15 @@ ul.menu li a{
 }
 
 @media all and (max-width: 768px){
+.main-nav-horizontal {
+  border-top: 0;
+}
+
 ul.menu {
+  position: absolute;
   background-color:#393939;
   left: 0;
-  top: -16px;
+  top: -1px;
 }
 
 ul.menu  {
@@ -45,8 +72,13 @@ ul.menu li {
   border-top: inset 1px rgba(204, 204, 204, 0.3);
   border-bottom: 2px solid #2A2A2A;
   width: 100%;
-  padding: 15px 0;
+  
   text-indent: 10px;
+}
+
+ul.menu li a {
+  color: #ffffff;
+  line-height: 45px;
 }
 
 .main-nav {
@@ -84,7 +116,7 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-.content {
+.wrapper {
   position: absolute;
   top:0px;
   left: 0;
@@ -93,9 +125,9 @@ input[type="checkbox"] {
   transition: left 0.5s ease;
 }
 
-input[type="checkbox"]:checked + div.content {
+input[type="checkbox"]:checked + div.wrapper {
   left: 200px;
-  box-shadow: -1px 10px 20px rgba(0,0,0,0.9);
+  box-shadow: -5px 0px 20px rgba(0,0,0,0.8);
 }
 
 input[type="checkbox"]:checked {
