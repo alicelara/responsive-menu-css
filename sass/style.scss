@@ -1,0 +1,174 @@
+@mixin bp($point) {
+  @if $point == mediumbp {
+    @media only screen and (max-width: 768px) { @content; }
+  }
+}
+
+@mixin bounce {
+  -webkit-transition: left 0.5s cubic-bezier(.5,1.5,0,1);
+    transition: left 0.5s cubic-bezier(.5,1.5,0,1);
+}
+
+$fb-color: #385E9C;
+$menu-bgcolor: #393939;
+$light-color: #fff;
+
+*, *:before, *:after {
+  margin:0;
+  padding:0; 
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body, p {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+h1 {
+  font-size: 35px;
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 25px;
+  font-size: 2.5rem;
+}
+
+h1, h2, p {
+  margin: 3rem 0;
+}
+
+input[type="checkbox"] {
+  display: none;
+  @include bp(mediumbp){
+    position: absolute;
+    top: 1.5rem;
+    left: 1.7rem;
+    display: block;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+    @include bounce;
+    &:checked {
+      left: 21.7rem;
+      + .wrapper {
+        left: 20rem;
+        box-shadow: -.5rem 0 2rem rgba(0,0,0,0.8);
+      }
+    }
+  }
+}
+  
+.menu-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  border-top: 0.5rem solid $fb-color;
+  @include bp(mediumbp){
+    background-color: $menu-bgcolor;
+    border-top: 0;
+    width: 20rem;
+    padding: 0;
+    overflow-y: auto;
+    height: 100%;
+    z-index: -1;
+  }
+}
+
+.menu {
+  width: 83rem;
+  margin: -2.5rem auto;
+  padding: 0;
+  li{
+    display: inline-block;
+    width: 8.5rem;
+    height: 4.5rem;
+    a{
+      display: block;
+      color: #333;
+      text-decoration: none;
+      letter-spacing: 0.1rem;
+      font-size: 1.2rem;
+      padding: 2rem .5rem .5rem;
+      &:hover {
+        background-color: $fb-color;
+        color: $light-color;
+      }
+    }
+  }
+  @include bp(mediumbp){
+    background-color: $menu-bgcolor;
+    left: 0;
+    padding: 0;
+    width: 20rem;
+    overflow: hidden;
+    margin: 0;
+    li {
+      list-style: none;
+      border-top: inset 0.1rem rgba(204, 204, 204, 0.3);
+      border-bottom: 0.2rem solid #2A2A2A;
+      width: 100%;
+      text-indent: 1rem;
+      a {
+        color: $light-color;
+        line-height: 4.5rem;
+        font-size: 1.4rem;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.wrapper {
+  background-color: $light-color;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  @include bp(mediumbp) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include bounce;
+  }
+}
+
+.content {
+  width: 95%;
+  margin: 8rem auto;
+  overflow: hidden;
+  @include bp(mediumbp) {
+    margin: 3rem auto;
+  }
+}
+
+.main-nav {
+  @include bp(mediumbp) {
+  background-color: $fb-color;
+  padding: .8rem;
+  box-shadow: 0 .1rem .5rem rgba(0,0,0,0.7);
+  .menu-icon {
+    border: .1rem solid #365384;
+    background-color: #466CB0;
+    position: relative;
+    width: 3.0rem;
+    padding: .2rem;
+    border-radius: .4rem;
+    .menu-icon-line {
+      width: 2rem;
+      height: .3rem;
+      background-color: $light-color;
+      margin: .3rem auto;
+      border-radius: .5rem;
+    }
+  }
+  }
+}
