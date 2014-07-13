@@ -29,6 +29,9 @@ body, p {
   font-family: Arial, sans-serif;
   font-size: 14px;
   font-size: 1.4rem;
+  @include bp(mediumbp) {
+    font-size: 2rem;
+  }
 }
 
 h1 {
@@ -152,6 +155,7 @@ input[type="checkbox"], label {
   margin: 8rem auto;
   overflow: hidden;
   @include bp(mediumbp) {
+    background-color: $light-color;
     margin: 3rem auto;
   }
 }
