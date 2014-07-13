@@ -55,9 +55,11 @@ label {
   cursor: pointer;
   width: 6rem;
   height: 5rem;
+  opacity: 0;
+  z-index: 9;
 }
 
-input[type="checkbox"], label {
+input[type="checkbox"] {
   display: none;
   @include bp(mediumbp){
     display: block;
