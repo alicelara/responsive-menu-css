@@ -31,14 +31,12 @@ h1, h2, p {
 }
 
 label {
-  cursor: pointer;
-  width: 6rem;
-  height: 5rem;
-  background-color: red;
   position: absolute;
   top: 1rem;
   left: 1rem;
-  z-index: 9;
+  cursor: pointer;
+  width: 6rem;
+  height: 5rem;
 }
 
 input[type="checkbox"], label {
@@ -75,7 +73,7 @@ input[type="checkbox"], label {
     border-top: 0;
     width: 20rem;
     padding: 0;
-    overflow-y: auto;
+    overflow-y: scroll;
     height: 100%;
     z-index: -1;
   }
@@ -90,7 +88,6 @@ input[type="checkbox"], label {
   .menu {
     background-color: #393939;
     left: 0;
-    padding: 0;
     width: 20rem;
     overflow: hidden;
     margin: 0;
@@ -107,7 +104,7 @@ input[type="checkbox"], label {
     border-top: inset 0.1rem rgba(204, 204, 204, 0.3);
     border-bottom: 0.2rem solid #2A2A2A;
     width: 100%;
-    height: 6rem;
+    height: 7rem;
     text-indent: 1rem;
   }
 }
@@ -126,7 +123,7 @@ input[type="checkbox"], label {
 @media only screen and (max-width: 1768px) {
   .menu li a {
     color: white;
-    line-height: 5.5rem;
+    line-height: 6.6rem;
     font-size: 2rem;
     padding: 0;
   }
