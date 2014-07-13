@@ -30,25 +30,32 @@ h1, h2, p {
   margin: 3rem 0;
 }
 
-input[type="checkbox"] {
+label {
+  cursor: pointer;
+  width: 6rem;
+  height: 5rem;
+  background-color: red;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 9;
+}
+
+input[type="checkbox"], label {
   display: none;
 }
 @media only screen and (max-width: 1768px) {
-  input[type="checkbox"] {
-    position: absolute;
-    top: 1.5rem;
-    left: 1.7rem;
+  input[type="checkbox"], label {
     display: block;
-    cursor: pointer;
     z-index: 1;
     opacity: 0;
     -webkit-transition: left 0.5s cubic-bezier(0.5, 1.5, 0, 1);
     transition: left 0.5s cubic-bezier(0.5, 1.5, 0, 1);
   }
-  input[type="checkbox"]:checked {
-    left: 21.7rem;
+  input[type="checkbox"]:checked + label, label:checked + label {
+    left: 21.5rem;
   }
-  input[type="checkbox"]:checked + .wrapper {
+  input[type="checkbox"]:checked + label + .wrapper, label:checked + label + .wrapper {
     left: 20rem;
     box-shadow: -0.5rem 0 2rem rgba(0, 0, 0, 0.8);
   }
@@ -79,10 +86,30 @@ input[type="checkbox"] {
   margin: -2.5rem auto;
   padding: 0;
 }
+@media only screen and (max-width: 1768px) {
+  .menu {
+    background-color: #393939;
+    left: 0;
+    padding: 0;
+    width: 20rem;
+    overflow: hidden;
+    margin: 0;
+  }
+}
 .menu li {
   display: inline-block;
   width: 8.5rem;
   height: 4.5rem;
+}
+@media only screen and (max-width: 1768px) {
+  .menu li {
+    list-style: none;
+    border-top: inset 0.1rem rgba(204, 204, 204, 0.3);
+    border-bottom: 0.2rem solid #2A2A2A;
+    width: 100%;
+    height: 6rem;
+    text-indent: 1rem;
+  }
 }
 .menu li a {
   display: block;
@@ -97,25 +124,10 @@ input[type="checkbox"] {
   color: white;
 }
 @media only screen and (max-width: 1768px) {
-  .menu {
-    background-color: #393939;
-    left: 0;
-    padding: 0;
-    width: 20rem;
-    overflow: hidden;
-    margin: 0;
-  }
-  .menu li {
-    list-style: none;
-    border-top: inset 0.1rem rgba(204, 204, 204, 0.3);
-    border-bottom: 0.2rem solid #2A2A2A;
-    width: 100%;
-    text-indent: 1rem;
-  }
   .menu li a {
     color: white;
-    line-height: 4.5rem;
-    font-size: 1.4rem;
+    line-height: 5.5rem;
+    font-size: 2rem;
     padding: 0;
   }
 }
@@ -157,15 +169,15 @@ input[type="checkbox"] {
     border: .1rem solid #365384;
     background-color: #466CB0;
     position: relative;
-    width: 3.0rem;
+    width: 6rem;
     padding: .2rem;
     border-radius: .4rem;
   }
   .main-nav .menu-icon .menu-icon-line {
-    width: 2rem;
-    height: .3rem;
+    width: 4.5rem;
+    height: .8rem;
     background-color: white;
-    margin: .3rem auto;
+    margin: .6rem auto;
     border-radius: .5rem;
   }
 }

@@ -45,20 +45,27 @@ h1, h2, p {
   margin: 3rem 0;
 }
 
-input[type="checkbox"] {
+label {
+  cursor: pointer;
+  width: 6rem;
+  height: 5rem;
+  background-color: red;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 9;
+}
+
+input[type="checkbox"], label {
   display: none;
   @include bp(mediumbp){
-    position: absolute;
-    top: 1.5rem;
-    left: 1.7rem;
     display: block;
-    cursor: pointer;
     z-index: 1;
     opacity: 0;
     @include bounce;
-    &:checked {
-      left: 21.7rem;
-      + .wrapper {
+    &:checked + label {
+      left: 21.5rem;
+    + .wrapper{
         left: 20rem;
         box-shadow: -.5rem 0 2rem rgba(0,0,0,0.8);
       }
@@ -88,10 +95,26 @@ input[type="checkbox"] {
   width: 83rem;
   margin: -2.5rem auto;
   padding: 0;
+  @include bp(mediumbp){
+    background-color: $menu-bgcolor;
+    left: 0;
+    padding: 0;
+    width: 20rem;
+    overflow: hidden;
+    margin: 0;
+  }
   li{
     display: inline-block;
     width: 8.5rem;
     height: 4.5rem;
+    @include bp(mediumbp) {
+      list-style: none;
+      border-top: inset 0.1rem rgba(204, 204, 204, 0.3);
+      border-bottom: 0.2rem solid #2A2A2A;
+      width: 100%;
+      height: 6rem;
+      text-indent: 1rem;
+    }
     a{
       display: block;
       color: #333;
@@ -103,30 +126,16 @@ input[type="checkbox"] {
         background-color: $fb-color;
         color: $light-color;
       }
-    }
-  }
-  @include bp(mediumbp){
-    background-color: $menu-bgcolor;
-    left: 0;
-    padding: 0;
-    width: 20rem;
-    overflow: hidden;
-    margin: 0;
-    li {
-      list-style: none;
-      border-top: inset 0.1rem rgba(204, 204, 204, 0.3);
-      border-bottom: 0.2rem solid #2A2A2A;
-      width: 100%;
-      text-indent: 1rem;
-      a {
+      @include bp(mediumbp) {
         color: $light-color;
-        line-height: 4.5rem;
-        font-size: 1.4rem;
+        line-height: 5.5rem;
+        font-size: 2rem;
         padding: 0;
+      }
       }
     }
   }
-}
+  
 
 .wrapper {
   background-color: $light-color;
@@ -159,14 +168,14 @@ input[type="checkbox"] {
     border: .1rem solid #365384;
     background-color: #466CB0;
     position: relative;
-    width: 3.0rem;
+    width: 6rem;
     padding: .2rem;
     border-radius: .4rem;
     .menu-icon-line {
-      width: 2rem;
-      height: .3rem;
+      width: 4.5rem;
+      height: .8rem;
       background-color: $light-color;
-      margin: .3rem auto;
+      margin: .6rem auto;
       border-radius: .5rem;
     }
   }
