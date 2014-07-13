@@ -144,7 +144,6 @@ input[type="checkbox"] {
     z-index: 1;
     opacity: 0;
     -webkit-transition: left 0.5s cubic-bezier(.5,1.5,0,1);
-    -moz-transition: left 0.5s cubic-bezier(.5,1.5,0,1);
     transition: left 0.5s cubic-bezier(.5,1.5,0,1);
   }
 
@@ -153,7 +152,6 @@ input[type="checkbox"] {
     top: 0;
     left: 0;
     -webkit-transition: left 0.5s cubic-bezier(.5,1.5,0,1);
-    -moz-transition: left 0.5s cubic-bezier(.5,1.5,0,1);
     transition: left 0.5s cubic-bezier(.5,1.5,0,1);
   }
 
