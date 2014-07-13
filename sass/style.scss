@@ -1,6 +1,6 @@
 @mixin bp($point) {
   @if $point == mediumbp {
-    @media only screen and (max-width: 768px) { @content; }
+    @media only screen and (max-width: 1768px) { @content; }
   }
 }
 

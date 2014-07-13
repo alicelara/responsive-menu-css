@@ -33,7 +33,7 @@ h1, h2, p {
 input[type="checkbox"] {
   display: none;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1768px) {
   input[type="checkbox"] {
     position: absolute;
     top: 1.5rem;
@@ -62,7 +62,7 @@ input[type="checkbox"] {
   padding: 2rem;
   border-top: 0.5rem solid #385e9c;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1768px) {
   .menu-wrapper {
     background-color: #393939;
     border-top: 0;
@@ -96,7 +96,7 @@ input[type="checkbox"] {
   background-color: #385e9c;
   color: white;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1768px) {
   .menu {
     background-color: #393939;
     left: 0;
@@ -126,7 +126,7 @@ input[type="checkbox"] {
   height: 100%;
   overflow-y: auto;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1768px) {
   .wrapper {
     position: absolute;
     top: 0;
@@ -141,13 +141,13 @@ input[type="checkbox"] {
   margin: 8rem auto;
   overflow: hidden;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1768px) {
   .content {
     margin: 3rem auto;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1768px) {
   .main-nav {
     background-color: #385e9c;
     padding: .8rem;
