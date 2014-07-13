@@ -56,8 +56,8 @@ input[type="checkbox"] {
   text-decoration: none;
   letter-spacing: 0.1rem;
   font-size: 1.2rem;
-  line-height: 6.5rem;
-  text-indent: 0.8rem
+  padding: 2rem .5rem .5rem;
+  text-indent: 0.8rem;
 }
 
 .menu li a:hover {
@@ -73,7 +73,7 @@ input[type="checkbox"] {
 
 .content {
   width: 95%;
-  margin: 3rem auto;
+  margin: 8rem auto;
   overflow: hidden;
 }
 @media all and (max-width: 768px){
@@ -107,6 +107,8 @@ input[type="checkbox"] {
   .menu li a {
     color: #ffffff;
     line-height: 4.5rem;
+    font-size: 1.4rem;
+    padding: 0;
   }
 
   .main-nav {
@@ -141,18 +143,18 @@ input[type="checkbox"] {
     cursor: pointer;
     z-index: 1;
     opacity: 0;
-    -webkit-transition: left 0.5s ease;
-    -moz-transition: left 0.5s ease;
-    transition: left 0.5s ease;
+    -webkit-transition: left 0.5s cubic-bezier(.5,1.5,0,1);
+    -moz-transition: left 0.5s cubic-bezier(.5,1.5,0,1);
+    transition: left 0.5s cubic-bezier(.5,1.5,0,1);
   }
 
   .wrapper {
     position: absolute;
     top: 0;
     left: 0;
-    -webkit-transition: left 0.5s ease;
-    -moz-transition: left 0.5s ease;
-    transition: left 0.5s ease;
+    -webkit-transition: left 0.5s cubic-bezier(.5,1.5,0,1);
+    -moz-transition: left 0.5s cubic-bezier(.5,1.5,0,1);
+    transition: left 0.5s cubic-bezier(.5,1.5,0,1);
   }
 
   input[type="checkbox"]:checked + .wrapper {
@@ -162,5 +164,9 @@ input[type="checkbox"] {
 
   input[type="checkbox"]:checked {
     left: 21.7rem;
+  }
+
+  .content {
+    margin: 3rem auto;
   }
 }
