@@ -25,7 +25,7 @@ html {
   font-size: 62.5%;
 }
 
-body, p {
+body {
   font-family: Arial, sans-serif;
   font-size: 16px;
   font-size: 1.6rem;
@@ -33,6 +33,7 @@ body, p {
   @include bp(mediumbp) {
     font-size: 2.5rem;
     line-height: 3.1rem;
+    -ms-touch-action: none;
   }
 }
 
