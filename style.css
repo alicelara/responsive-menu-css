@@ -75,6 +75,7 @@ input[type="checkbox"] {
     display: block;
     z-index: 1;
     opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
     -webkit-transition: left 0.5s cubic-bezier(0.5, 1.5, 0, 1);
     transition: left 0.5s cubic-bezier(0.5, 1.5, 0, 1);
   }
@@ -185,6 +186,7 @@ input[type="checkbox"] {
     top: 0;
     left: 0;
     -webkit-overflow-scrolling: touch;
+    -webkit-transform: translate3d(0, 0, 0);
     -webkit-transition: left 0.5s cubic-bezier(0.5, 1.5, 0, 1);
     transition: left 0.5s cubic-bezier(0.5, 1.5, 0, 1);
   }

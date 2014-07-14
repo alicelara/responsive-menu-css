@@ -5,6 +5,7 @@
 }
 
 @mixin bounce {
+  -webkit-transform: translate3d(0,0,0);
   -webkit-transition: left 0.5s cubic-bezier(.5,1.5,0,1);
     transition: left 0.5s cubic-bezier(.5,1.5,0,1);
 }
