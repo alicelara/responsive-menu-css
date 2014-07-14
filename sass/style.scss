@@ -9,7 +9,18 @@
     transition: left 0.5s cubic-bezier(.5,1.5,0,1);
 }
 
-$fb-color: #385E9C;
+@mixin linear-gradient($fromColor, $toColor) {
+  background-color: $toColor; /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
+  background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
+  background-image:         linear-gradient(top, $fromColor, $toColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+}
+
+$fb-color: #3c5f9a;
 $menu-bgcolor: #393939;
 $light-color: #FFFFFF;
 
@@ -137,6 +148,7 @@ input[type="checkbox"] {
       font-size: 1.3rem;
       text-indent: 1.5rem;
       letter-spacing: 0.2rem;
+      @include linear-gradient(#393939, #3f3f3f);
     }
     a{
       display: block;
@@ -183,12 +195,13 @@ input[type="checkbox"] {
 
 .main-nav {
   @include bp(mediumbp) {
-  background-color: $fb-color;
+  @include linear-gradient(#4C6EA5, #3c5f9a);
   padding: 1.1rem;
   box-shadow: 0 .1rem 2rem rgba(0,0,0,0.7);
   .menu-icon {
     border: .1rem solid #365384;
-    background-color: #466CB0;
+    @include linear-gradient(#5373A5, #4C6EA5);
+    box-shadow: 0 0 2rem rgba(0,0,0,0.2);
     position: relative;
     width: 4.5rem;
     padding: .5rem;

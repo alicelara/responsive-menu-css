@@ -93,7 +93,7 @@ input[type="checkbox"] {
   left: 0;
   width: 100%;
   padding: 2rem;
-  border-top: 0.8rem solid #385e9c;
+  border-top: 0.8rem solid #3c5f9a;
 }
 @media only screen and (max-width: 768px) {
   .menu-wrapper {
@@ -138,6 +138,20 @@ input[type="checkbox"] {
     font-size: 1.3rem;
     text-indent: 1.5rem;
     letter-spacing: 0.2rem;
+    background-color: #3f3f3f;
+    /* Fallback Color */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#393939), to(#3f3f3f));
+    /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient(top, #393939, #3f3f3f);
+    /* Chrome 10+, Saf5.1+, iOS 5+ */
+    background-image: -moz-linear-gradient(top, #393939, #3f3f3f);
+    /* FF3.6 */
+    background-image: -ms-linear-gradient(top, #393939, #3f3f3f);
+    /* IE10 */
+    background-image: -o-linear-gradient(top, #393939, #3f3f3f);
+    /* Opera 11.10+ */
+    background-image: linear-gradient(top, #393939, #3f3f3f);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#393939', EndColorStr='#3f3f3f');
   }
 }
 .menu li a {
@@ -147,7 +161,7 @@ input[type="checkbox"] {
   padding: 2rem .5rem .5rem;
 }
 .menu li a:hover {
-  background-color: #385e9c;
+  background-color: #3c5f9a;
   color: white;
 }
 @media only screen and (max-width: 768px) {
@@ -189,13 +203,40 @@ input[type="checkbox"] {
 
 @media only screen and (max-width: 768px) {
   .main-nav {
-    background-color: #385e9c;
+    background-color: #3c5f9a;
+    /* Fallback Color */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#4c6ea5), to(#3c5f9a));
+    /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient(top, #4c6ea5, #3c5f9a);
+    /* Chrome 10+, Saf5.1+, iOS 5+ */
+    background-image: -moz-linear-gradient(top, #4c6ea5, #3c5f9a);
+    /* FF3.6 */
+    background-image: -ms-linear-gradient(top, #4c6ea5, #3c5f9a);
+    /* IE10 */
+    background-image: -o-linear-gradient(top, #4c6ea5, #3c5f9a);
+    /* Opera 11.10+ */
+    background-image: linear-gradient(top, #4c6ea5, #3c5f9a);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#4c6ea5', EndColorStr='#3c5f9a');
     padding: 1.1rem;
     box-shadow: 0 0.1rem 2rem rgba(0, 0, 0, 0.7);
   }
   .main-nav .menu-icon {
     border: .1rem solid #365384;
-    background-color: #466CB0;
+    background-color: #4c6ea5;
+    /* Fallback Color */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#5373a5), to(#4c6ea5));
+    /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient(top, #5373a5, #4c6ea5);
+    /* Chrome 10+, Saf5.1+, iOS 5+ */
+    background-image: -moz-linear-gradient(top, #5373a5, #4c6ea5);
+    /* FF3.6 */
+    background-image: -ms-linear-gradient(top, #5373a5, #4c6ea5);
+    /* IE10 */
+    background-image: -o-linear-gradient(top, #5373a5, #4c6ea5);
+    /* Opera 11.10+ */
+    background-image: linear-gradient(top, #5373a5, #4c6ea5);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#5373a5', EndColorStr='#4c6ea5');
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
     position: relative;
     width: 4.5rem;
     padding: .5rem;
