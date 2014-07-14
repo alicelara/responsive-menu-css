@@ -12,23 +12,37 @@ html {
 
 body, p {
   font-family: Arial, sans-serif;
-  font-size: 14px;
-  font-size: 1.4rem;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 2rem;
 }
-@media only screen and (max-width: 1768px) {
+@media only screen and (max-width: 768px) {
   body, p {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    line-height: 3.1rem;
   }
 }
 
 h1 {
-  font-size: 35px;
-  font-size: 3.5rem;
+  font-size: 32px;
+  font-size: 3.2rem;
+}
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 37px;
+    font-size: 3.7rem;
+  }
 }
 
 h2 {
-  font-size: 25px;
-  font-size: 2.5rem;
+  font-size: 28px;
+  font-size: 2.8rem;
+}
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 32px;
+    font-size: 3.2rem;
+  }
 }
 
 h1, h2, p {
@@ -38,15 +52,15 @@ h1, h2, p {
 label {
   display: none;
 }
-@media only screen and (max-width: 1768px) {
+@media only screen and (max-width: 768px) {
   label {
     display: block;
     position: absolute;
     top: 1rem;
     left: 1rem;
     cursor: pointer;
-    width: 6rem;
-    height: 5rem;
+    width: 4.5rem;
+    height: 4.5rem;
     opacity: 0;
     z-index: 9;
   }
@@ -55,7 +69,7 @@ label {
 input[type="checkbox"] {
   display: none;
 }
-@media only screen and (max-width: 1768px) {
+@media only screen and (max-width: 768px) {
   input[type="checkbox"] {
     display: block;
     z-index: 1;
@@ -64,10 +78,10 @@ input[type="checkbox"] {
     transition: left 0.5s cubic-bezier(0.5, 1.5, 0, 1);
   }
   input[type="checkbox"]:checked + label {
-    left: 21.5rem;
+    left: 72%;
   }
   input[type="checkbox"]:checked ~ .wrapper {
-    left: 20rem;
+    left: 70%;
     box-shadow: -0.5rem 0 2rem rgba(0, 0, 0, 0.8);
   }
 }
@@ -78,13 +92,12 @@ input[type="checkbox"] {
   left: 0;
   width: 100%;
   padding: 2rem;
-  border-top: 0.5rem solid #385e9c;
+  border-top: 0.8rem solid #385e9c;
 }
-@media only screen and (max-width: 1768px) {
+@media only screen and (max-width: 768px) {
   .menu-wrapper {
     background-color: #393939;
     border-top: 0;
-    width: 20rem;
     padding: 0;
     overflow-y: scroll;
     height: 100%;
@@ -93,51 +106,53 @@ input[type="checkbox"] {
 }
 
 .menu {
-  width: 83rem;
+  width: 85rem;
   margin: -2.5rem auto;
   padding: 0;
 }
-@media only screen and (max-width: 1768px) {
+@media only screen and (max-width: 768px) {
   .menu {
     background-color: #393939;
     left: 0;
-    width: 20rem;
+    width: inherit;
     overflow: hidden;
     margin: 0;
   }
 }
 .menu li {
   display: inline-block;
-  width: 8.5rem;
+  width: 10rem;
   height: 4.5rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.2rem;
 }
-@media only screen and (max-width: 1768px) {
+@media only screen and (max-width: 768px) {
   .menu li {
     list-style: none;
     border-top: inset 0.1rem rgba(204, 204, 204, 0.3);
     border-bottom: 0.2rem solid #2A2A2A;
     width: 100%;
     height: 7rem;
-    text-indent: 1rem;
+    font-size: 1.3rem;
+    text-indent: 1.5rem;
+    letter-spacing: 0.2rem;
   }
 }
 .menu li a {
   display: block;
   color: #333;
   text-decoration: none;
-  letter-spacing: 0.1rem;
-  font-size: 1.2rem;
   padding: 2rem .5rem .5rem;
 }
 .menu li a:hover {
   background-color: #385e9c;
   color: white;
 }
-@media only screen and (max-width: 1768px) {
+@media only screen and (max-width: 768px) {
   .menu li a {
     color: white;
-    line-height: 6.6rem;
-    font-size: 2rem;
+    font-size: 2.4rem;
+    line-height: 6.7rem;
     padding: 0;
   }
 }
@@ -148,7 +163,7 @@ input[type="checkbox"] {
   height: 100%;
   overflow-y: auto;
 }
-@media only screen and (max-width: 1768px) {
+@media only screen and (max-width: 768px) {
   .wrapper {
     position: absolute;
     top: 0;
@@ -163,32 +178,31 @@ input[type="checkbox"] {
   margin: 8rem auto;
   overflow: hidden;
 }
-@media only screen and (max-width: 1768px) {
+@media only screen and (max-width: 768px) {
   .content {
-    background-color: white;
-    margin: 3rem auto;
+    margin: 1rem auto;
   }
 }
 
-@media only screen and (max-width: 1768px) {
+@media only screen and (max-width: 768px) {
   .main-nav {
     background-color: #385e9c;
-    padding: .8rem;
-    box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.7);
+    padding: 1.1rem;
+    box-shadow: 0 0.1rem 2rem rgba(0, 0, 0, 0.7);
   }
   .main-nav .menu-icon {
     border: .1rem solid #365384;
     background-color: #466CB0;
     position: relative;
-    width: 6rem;
-    padding: .2rem;
+    width: 4.5rem;
+    padding: .5rem;
     border-radius: .4rem;
   }
   .main-nav .menu-icon .menu-icon-line {
-    width: 4.5rem;
-    height: .8rem;
+    width: 3rem;
+    height: .5rem;
     background-color: white;
-    margin: .6rem auto;
+    margin: .4rem auto;
     border-radius: .5rem;
   }
 }
